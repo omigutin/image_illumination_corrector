@@ -5,7 +5,7 @@ from pathlib import Path
 
 if __package__ in {None, ""}:
     sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
-    from thermal_frame_normalizer.ui import launch_app
+    from src.image_illumination_corrector.ui import launch_app
 else:
     from .ui import launch_app
 

@@ -3,9 +3,9 @@ requires = ["setuptools>=68"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "thermal-frame-normalizer"
+name = "image-illumination-corrector"
 version = "0.1.0"
-description = "Interactive tool for tuning vignette and illumination correction on thermal frames."
+description = "Interactive desktop tool for vignette reduction and image illumination correction."
 readme = "README.md"
 requires-python = ">=3.12,<3.13"
 license = { text = "MIT" }
@@ -18,10 +18,10 @@ dependencies = [
 ]
 
 [project.scripts]
-thermal-frame-normalizer = "thermal_frame_normalizer.app:main"
+image-illumination-corrector = "image_illumination_corrector.app:main"
 
 [tool.setuptools.packages.find]
-include = ["thermal_frame_normalizer*"]
+include = ["image_illumination_corrector*"]
 
 [dependency-groups]
 dev = [

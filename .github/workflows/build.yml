@@ -6,7 +6,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
 
     steps:
       - name: Checkout
@@ -30,15 +30,15 @@ jobs:
 
       - name: Build binary
         run: |
-          python -m PyInstaller --noconfirm --clean --onefile --name thermal-frame-normalizer thermal_frame_normalizer/__main__.py
+          python -m PyInstaller --noconfirm --clean --onefile --name image-illumination-corrector image_illumination_corrector/__main__.py
 
       - name: Pack artifact
         run: |
-          tar -czf thermal-frame-normalizer-linux.tar.gz -C dist thermal-frame-normalizer
+          tar -czf image-illumination-corrector-linux.tar.gz -C dist image-illumination-corrector
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
-          name: thermal-frame-normalizer-linux
-          path: thermal-frame-normalizer-linux.tar.gz
+          name: image-illumination-corrector-linux
+          path: image-illumination-corrector-linux.tar.gz
           if-no-files-found: error

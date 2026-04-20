@@ -1,4 +1,4 @@
-"""Interactive tools for thermal frame illumination correction."""
+"""Interactive tools for vignette reduction and image illumination correction."""
 
 __all__ = [
     "app",

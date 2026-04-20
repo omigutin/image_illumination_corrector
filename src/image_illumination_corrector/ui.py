@@ -239,10 +239,10 @@ class PreviewPane(ttk.LabelFrame):
         self.image_label.configure(image="", text=text)
 
 
-class ThermalFrameNormalizerApp:
+class ImageIlluminationCorrectorApp:
     def __init__(self, root: tk.Tk) -> None:
         self.root = root
-        self.root.title("thermal_frame_normalizer")
+        self.root.title("image_illumination_corrector")
         self.root.geometry("1440x900")
         self.root.minsize(1180, 760)
 
@@ -424,7 +424,7 @@ class ThermalFrameNormalizerApp:
         path = filedialog.asksaveasfilename(
             title="Сохранить пресет",
             defaultextension=".json",
-            initialfile="thermal_preset.json",
+            initialfile="image_illumination_preset.json",
             filetypes=[("JSON пресет", "*.json"), ("Все файлы", "*.*")],
         )
         if not path:
@@ -648,8 +648,8 @@ class ThermalFrameNormalizerApp:
 
 def launch_app() -> None:
     root = tk.Tk()
-    ThermalFrameNormalizerApp(root)
+    ImageIlluminationCorrectorApp(root)
     root.mainloop()
 
 
-__all__ = ["launch_app", "ThermalFrameNormalizerApp"]
+__all__ = ["launch_app", "ImageIlluminationCorrectorApp"]
